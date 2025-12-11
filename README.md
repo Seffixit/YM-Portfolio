@@ -1,7 +1,7 @@
 # Seffixit Portfolio
 
 ## About Me
-Hi, I’m Yusif McCall. I’m building full-stack applications, learning networking and security, and expanding my skills for certifications and my degree.
+Hi, I’m Yusif McCall. I’m Developing full-stack applications, learning networking, security, and expanding my skills for certifications and degree.
 
 ## Tech Stack
 - **Backend:** Node.js, Express
@@ -24,7 +24,8 @@ Hi, I’m Yusif McCall. I’m building full-stack applications, learning network
 
 ## Fun Facts
 - In 8th grade, I built a **book vending machine**.
-- I love turning real-world ideas into working code.
+- I love when my code meets the source
+Birth of a Creation =)
 
 ## Links
 - [Landing Page](https://my-repository-jet-five.vercel.app/)
