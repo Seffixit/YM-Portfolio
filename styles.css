@@ -103,4 +103,48 @@ height: 400px;
 }
 }
 
+/* Vault Section Styles */
+#vaultSection {
+margin-top: 20px;
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 8px;
+background-color: #f9f9f9;
+text-align: center;
+}
 
+#vaultButton {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#vaultButton:hover {
+background-color: #45a049;
+}
+
+#vaultSection {
+margin: 20px auto;
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 8px;
+background-color: #f9f9f9;
+text-align: center;
+max-width: 600px;
+}
+
+#vaultButton {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#vaultButton:hover {
+background-color: #45a049;
+}
