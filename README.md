@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,39 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# Seffixit Portfolio
+
+## About Me
+Hi, I’m Yusif McCall. I’m Developing full-stack applications, learning networking, security, and expanding my skills for certifications and degree.
+
+## Tech Stack
+- **Backend:** Node.js, Express
+- **Database:** MongoDB Atlas
+- **Auth/Security:** JWT, encrypted .env
+- **Frontend:** HTML, CSS, JS (React optional)
+- **Caching:** Redis/Memcached (planned)
+- **Other:** Vercel hosting for landing page
+
+## Current Projects
+- SecureVault Backend (Node.js, MongoDB, JWT)
+- Landing Page for Portfolio & Resume
+- Full-stack SaaS demo on GitHub
+
+## How to Run Locally
+1. Clone repo
+2. Install dependencies: `npm install`
+3. Set local encryption key: `export LOCAL_ENC_KEY=YOUR_KEY`
+4. Run: `npm start`
+
+## Fun Facts
+- In 8th grade, I built a **book vending machine**.
+- I love when my code meets the source
+Birth of a Creation =)
+
+## Links
+- [Landing Page](https://my-repository-jet-five.vercel.app/)
+
+- [Resume PDF](./Resume/Yusif-McCall-Resume.pdf)
+- [GitHub Projects](https://github.com/Seffixit/Seffixit-Portfolio)
+>>>>>>> c52a969334b635421d98ee35000633dc3c3dd303
