@@ -1,6 +1,5 @@
 // /pages/_app.js
 import '../styles/vault.css'; // Correct path to your main CSS
-
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
