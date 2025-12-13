@@ -1,3 +1,4 @@
+// /pages/index.js
 export default function Home() {
 return (
 <div>
@@ -5,7 +6,9 @@ return (
 <header className="section">
 <div className="container">
 <h1>Welcome to My Portfolio</h1>
-<p>Hello! I'm Yusif McCall. Welcome to my landing page. Explore my work and download my resume below.</p>
+<p>
+Hello! I'm Yusif McCall. Welcome to my landing page. Explore my work and download my resume below.
+</p>
 </div>
 </header>
 
@@ -13,7 +16,14 @@ return (
 <section className="section">
 <div className="container">
 <h2>About Me</h2>
-<p>I aim to be seen for my work and my potential. I'm learning,building, and pursuing oppurtunities that align with my growth and purpose. I bring creativity, determination and a drive to make an impact.</p>
+<p>
+I aim to be seen for my work and my potential. I'm learning, building, and pursuing opportunities that align with my growth and purpose. I bring creativity, determination, and a drive to make an impact.
+</p>
+
+{/* Vault Project Link */}
+<a href="/vault-demo" className="vault-link">
+Check out my Vault Project!
+</a>
 </div>
 </section>
 
@@ -21,21 +31,18 @@ return (
 <section className="section">
 <div className="container">
 <h2>My Resume</h2>
-
-{/* Link to PDF with GA4 tracking */}
 <p>
 <a
-href="ym.pdf/ymresume.pdf"
+href="/ym.pdf/ymresume.pdf"
 target="_blank"
 onClick={() => window.trackEvent('resume_view', 'click', 'PDF Resume')}
 >
 View Resume (PDF)
 </a>
 </p>
-
-{/* Embed PDF */}
 <iframe
-src="ym.pdf/ymresume.pdf"
+src="/ym.pdf/ymresume.pdf"
+
 className="pdf-viewer"
 title="My Resume"
 />
@@ -45,7 +52,7 @@ title="My Resume"
 {/* Quote */}
 <section className="section">
 <div className="container">
-<blockquote>"Code meets source, a my creation is born =)"</blockquote>
+<blockquote>"Code meets source, creation is born =)"</blockquote>
 </div>
 </section>
 
