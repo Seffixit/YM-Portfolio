@@ -1,0 +1,87 @@
+// /pages/_app.js
+// Google-enabled version of _app.js for GA4 and event tracking
+
+import '../styles/globals.css';
+import '../styles/style.css'; // Vault section CSS
+import Script from 'next/script';
+import { useEffect } from 'react';
+
+function MyApp({ Component, pageProps }) {
+// Function to send GA4 events
+const trackEvent = (action, category, label) => {
+if (typeof window.gtag !== 'undefined') {
+window.gtag('event', action, {
+event_category: category,
+event_label: label,
+});
+}
+};
+
+// Scroll tracking: fires once at 50% scroll
+if (typeof window !== 'undefined') {
+console.log("Portfolio loaded!"); // Console log on page load
+
+let scrollSent = false;
+window.addEventListener('scroll', () => {
+const scrollPercent =
+(window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+if (scrollPercent > 50 && !scrollSent) {
+trackEvent('scroll_50', 'scroll', '50_percent');
+scrollSent = true;
+}
+});
+}
+
+// Vault button click listener
+useEffect(() => {
+const vaultButton = document.getElementById("vaultButton");
+
+if (vaultButton) {
+vaultButton.addEventListener("click", async () => {
+try {
+const response = await fetch(
+"https://8ohd2ffyp2.execute-api.us-east-2.amazonaws.com/saveSecret",
+{
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({ secret: "My first secret from the resume!" }),
+}
+);
+
+const data = await response.json();
+alert(data.message);
+} catch (err) {
+console.error(err);
+alert("Something went wrong. Check console for details.");
+}
+});
+}
+}, []);
+
+return (
+<>
+{/* Google Analytics */}
+<Script
+src={`https://www.googletagmanager.com/gtag/js?id=G-7NJZDD7JMH`}
+strategy="afterInteractive"
+/>
+<Script id="google-analytics" strategy="afterInteractive">
+{`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7NJZDD7JMH');
+`}
+</Script>
+
+{/* Make trackEvent globally available */}
+<Script id="global-track-event" strategy="afterInteractive">
+{`window.trackEvent = ${trackEvent.toString()};`}
+</Script>
+
+<Component {...pageProps} trackEvent={trackEvent} />
+</>
+);
+}
+
+export default MyApp;
