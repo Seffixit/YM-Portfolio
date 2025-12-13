@@ -35,14 +35,18 @@ Check out my Vault Project!
 <a
 href="/ym.pdf/ymresume.pdf"
 target="_blank"
-onClick={() => window.trackEvent('resume_view', 'click', 'PDF Resume')}
+onClick={() => {
+if (typeof window !== "undefined" && window.trackEvent) {
+window.trackEvent('resume_view', 'click', 'PDF Resume');
+}
+}}
 >
+
 View Resume (PDF)
 </a>
 </p>
 <iframe
 src="/ym.pdf/ymresume.pdf"
-
 className="pdf-viewer"
 title="My Resume"
 />
@@ -61,8 +65,22 @@ title="My Resume"
 <div className="container">
 <h2>Links</h2>
 <ul>
-<li><a href="https://ym-portfolio-cm1o9xbyd-seffixits-projects.vercel.app" target="_blank">Landing Page</a></li>
-<li><a href="https://github.com/Seffixit/Seffixit-Portfolio" target="_blank">GitHub Projects</a></li>
+<li>
+<a
+href="https://ym-portfolio-cm1o9xbyd-seffixits-projects.vercel.app"
+target="_blank"
+>
+Landing Page
+</a>
+</li>
+<li>
+<a
+href="https://github.com/Seffixit/Seffixit-Portfolio"
+target="_blank"
+>
+GitHub Projects
+</a>
+</li>
 </ul>
 </div>
 </section>
