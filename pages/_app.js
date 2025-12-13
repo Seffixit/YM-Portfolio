@@ -1,9 +1,9 @@
 // /pages/_app.js
-import '../app/globals.css';
+import '../styles/global.css'; // Your main global styles
+import '../styles/vault.css'; // Vault section styles
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
-// Function to send GA4 events
 const trackEvent = (action, category, label) => {
 if (typeof window.gtag !== 'undefined') {
 window.gtag('event', action, {
@@ -13,7 +13,7 @@ event_label: label,
 }
 };
 
-// Scroll tracking: fires once at 50% scroll
+
 if (typeof window !== 'undefined') {
 let scrollSent = false;
 window.addEventListener('scroll', () => {
@@ -29,7 +29,7 @@ return (
 <>
 {/* Google Analytics */}
 <Script
-src={`https://www.googletagmanager.com/gtag/js?id=G-7NJZDD7JMH`}
+src="https://www.googletagmanager.com/gtag/js?id=G-7NJZDD7JMH"
 strategy="afterInteractive"
 />
 <Script id="google-analytics" strategy="afterInteractive">
