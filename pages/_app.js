@@ -3,6 +3,15 @@ import '../styles/global.css'; // <-- main global styles
 import '../styles/vault.css'; // <-- vault section styles
 import Script from 'next/script';
 
+
+
+
+
+
+
+
+o
+o
 function MyApp({ Component, pageProps }) {
 // Function to send GA4 events
 const trackEvent = (action, category, label) => {
