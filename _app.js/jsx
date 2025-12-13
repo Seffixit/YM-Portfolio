@@ -1,7 +1,7 @@
 // /pages/_app.js
 // Google-enabled version of _app.js for GA4 and event tracking
 
-import '../styles/globals.css';
+import '.../app/globals.css';
 import '../styles/style.css'; // Vault section CSS
 import Script from 'next/script';
 import { useEffect } from 'react';
